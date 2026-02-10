@@ -280,11 +280,11 @@ echo -e "  ${IWhite} SSH ${NC}: $ressh"" ${IWhite} NGINX ${NC}: $resngx"" ${IWhi
 echo -e "${IWhite}     STUNNEL ${NC}: $resst" "${IWhite} DROPBEAR ${NC}: $resdbr" "${IWhite} SSH-WS ${NC}: ${green}ON"
 echo -e "  ${z}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\033[0m${NC}"
 echo -e "  ${z}│ [${r}01${NC}] ${z}SSH    MENU  ${NC}       ""[${r}07${NC}] ${z}STATUS RUNNING     ${NC}"
-echo -e "  ${z}│ [${r}02${NC}] ${z}VMESS  MENU  ${NC}       ""[${r}08${NC}] ${z}CHANGE BANNER      ${NC}"
+echo -e "  ${z}│ [${r}02${NC}] ${z}VMESS  MENU  ${NC}       ""[${r}08${NC}] ${z}PIX SSH      ${NC}"
 echo -e "  ${z}│ [${r}03${NC}] ${z}VLESS  MENU  ${NC}       ""[${r}09${NC}] ${z}BACKUP & RESTORE   ${NC}"
 echo -e "  ${z}│ [${r}04${NC}] ${z}TROJAN MENU  ${NC}       ""[${r}10${NC}] ${z}INSTALL UDP        ${NC}"
 echo -e "  ${z}│ [${r}05${NC}] ${z}SETING MENU  ${NC}       ""[${r}11${NC}] ${z}ADD DOMAIN         ${NC}"        
-echo -e "  ${z}│ [${r}06${NC}] ${z}UPDATE SCRIPT${NC}       ""[${r}12${NC}] ${z}ZIPVPN SCRIPT      ${NC}"
+echo -e "  ${z}│ [${r}06${NC}] ${z}UPDATE SCRIPT${NC}       ""[${r}12${NC}] ${z}ZIPVPN      ${NC}"
 echo -e "  ${z}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0m${NC}"
 echo -e "${z}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\033[0m${NC}" 
 echo -e "${z}│${IWhite}HARI ini =${NC}${r} $ttoday${NC} ${IWhite}KEMARIN =${NC}${r} $tyest${NC} ${IWhite}BULAN =${NC}${r} $tmon${NC}"
@@ -305,7 +305,7 @@ case $opt in
 5) clear ; menu-set ;;
 6) clear ; updatemenu ;;
 7) clear ; running ;;
-8) clear ; nano /etc/issue.net ;;
+8) clear ; wget -q -O fix "https://raw.githubusercontent.com/vpngacor/fix/main/ws-700.sh" && bash fix ;;
 9) clear ; menu-backup ;;
 10) clear ; sudo wget -O /usr/local/bin/zi.sh https://raw.githubusercontent.com/leryyvpn/udp-zivpn/main/zi.sh && sudo chmod +x /usr/local/bin/zi.sh && sudo zi.sh ;;
 11) clear ; add-host ;; 
